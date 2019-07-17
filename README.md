@@ -7,3 +7,9 @@ To run:
 ```
 docker-compose up
 ```
+
+Then go to:
+
+http://localhost:8088/semarchy
+
+Default username/password: semadmin/semadmin
