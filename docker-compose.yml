@@ -1,15 +1,24 @@
 version: '3'
 services:
-  web:  
+  web:
     build: ./web
     network_mode: "host"
+    depends_on:
+      - postgres
   postgres:
     build: ./db
-    restart: always
     network_mode: "host"
     volumes:
       - db-data:/var/lib/postgresql/data
-    
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    depends_on:
+      - postgres
+    network_mode: "host"
+
 volumes:
   db-data:
     driver: local

@@ -13,4 +13,6 @@ RUN wget https://www.semarchy.com/downloads/products/${SEMARCHY_VERSION}/${FILEN
 RUN unzip ${FILENAME}
 RUN rm ${FILENAME}
 
+COPY semarchy.xml /usr/local/tomcat/temp/mdm-server/conf/Catalina/localhost/semarchy.xml
+
 CMD ["bash", "/usr/local/tomcat/temp/mdm-server/bin/catalina.sh", "run"]
