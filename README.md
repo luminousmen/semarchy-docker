@@ -1,4 +1,6 @@
-This repo is a demo example of running Semarchy xDM in docker environment. For sake of simplicity the containers using host network.
+# Semarchy MDM demo
+
+This repo is a demo example of running Semarchy xDM in docker environment. For sake of simplicity containers use host network.
 
 Current latest version is 5.0.4, please check the latest docs for newer versions.
 
